@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLW</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #666;
+    }
+    
+.tg  {
+  border-collapse:collapse;
+  border-spacing:0;
+  width: 100%;
+  }
+  
+.tg td{
+  border-color:black;
+  border-style:solid;
+  border-width:0px;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;}
+.tg th{
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  font-weight:normal;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;
+}
+.tg .tg-0pky{
+  border-color:inherit;
+  text-align:center;
+  vertical-align:top}
+
+#relogio {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+#data {
+  font-size: 30px;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Meu Site!</h1>
+  <table class="tg"><thead>
+    <tr>
+      <th class="tg-0pky"></th>
+      <th class="tg-0pky">🅷🅻🆆 🆃🅴🅲🅽🅾🅻🅾🅶🅸🅰🆂</th>
+      <th class="tg-0pky">
+        <div id="relogio"></div>
+        <div id="data"></div>
+      </th>
+    </tr></thead>
+  <tbody>
+    <tr>
+      <td class="tg-0pky"></td>
+      <td class="tg-0pky"><p>Links uteis</p><br><p><a href="https://chatgpt.com">chatGPT</a></p>
+      </td>
+      <td class="tg-0pky"></td>
+    </tr>
+  </tbody>
+  </table>
+</body>
+<script>
+  function atualizarRelogio() {
+    const agora = new Date();
+
+    const horas = agora.getHours().toString().padStart(2, '0');
+    const minutos = agora.getMinutes().toString().padStart(2, '0');
+    const segundos = agora.getSeconds().toString().padStart(2, '0');
+
+    const dia = agora.getDate().toString().padStart(2, '0');
+    const mes = (agora.getMonth() + 1).toString().padStart(2, '0'); // Janeiro = 0
+    const ano = agora.getFullYear();
+
+    const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+    const nomeDia = diasDaSemana[agora.getDay()];
+
+    document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
+    document.getElementById('data').textContent = `${nomeDia}, ${dia}/${mes}/${ano}`;
+  }
+
+  setInterval(atualizarRelogio, 1000);
+  atualizarRelogio(); // Atualiza imediatamente ao carregar
+</script>
+</html>

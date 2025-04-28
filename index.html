@@ -358,6 +358,13 @@
   a{
     text-decoration: none;
   }</style>
+  <!-- Formulário HTML -->
+<form method="POST" action="enviar_email.php">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
 </body>
 <script>
   function atualizarRelogio() {
